@@ -155,7 +155,7 @@ def main():
     # Initialize the engine
     if 'engine' not in st.session_state:
         try:
-            api_key = os.getenv('OPENAI_API_KEY', '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')
+            api_key = st.secrets["OPEN_API_KEY"]
             st.session_state.engine = ClimateInsightEngine(api_key)
             st.success("✅ ClimaShield Engine Loaded Successfully!")
         except Exception as e:

@@ -329,8 +329,7 @@ class ClimateInsightEngine:
 # Main testing block
 if __name__ == "__main__":
     # Set your OpenAI API key here
-    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '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')
- 
+    OPENAI_API_KEY = "your-api-key-here"
     # Initialize the insight engine
     try:
         engine = ClimateInsightEngine(OPENAI_API_KEY)
