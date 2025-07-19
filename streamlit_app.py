@@ -223,29 +223,9 @@ def main():
         st.markdown(create_progress_bar(scores['water_management']), unsafe_allow_html=True)
         st.caption(f"Avg Rainfall: {hist['avg_rainfall']}mm | Absorption Score: {soil['water_absorption_score']}/10")
         
-        # Detailed analysis in expandable sections
+
         st.markdown("---")
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            with st.expander("📊 Detailed Environmental Data"):
-                st.metric("Elevation", f"{soil['elevation']}m")
-                st.metric("Lake Bed Probability", f"{soil['lake_bed_probability']}/10")
-                st.metric("Rainfall Trend", hist['rainfall_trend'])
-                st.metric("Data Years Available", f"{len(hist['data_years'])} years")
-        
-        with col2:
-            with st.expander("🎯 Risk Assessment"):
-                # Create gauge charts for each factor
-                fig_air = create_gauge_chart(scores['air_quality'], "Air Quality Risk")
-                st.plotly_chart(fig_air, use_container_width=True)
-                
-                fig_construction = create_gauge_chart(scores['construction_stability'], "Construction Stability")
-                st.plotly_chart(fig_construction, use_container_width=True)
-        
         # Current state section
-        st.markdown("---")
         st.markdown("### 📈 Current state")
         st.markdown("*Swipe to see what's likely in 10 years*")
         
@@ -268,22 +248,11 @@ def main():
         
         # Export functionality
         st.markdown("---")
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         
         with col1:
             if st.button("📄 Export Report", use_container_width=True):
                 st.success("📄 Report export feature coming soon!")
-        
-        with col2:
-            if st.button("📧 Share Analysis", use_container_width=True):
-                st.success("📧 Share feature coming soon!")
-        
-        with col3:
-            if st.button("🔄 Analyze Another Area", use_container_width=True):
-                if 'insights' in st.session_state:
-                    del st.session_state.insights
-                st.experimental_rerun()
-
     # Footer
     st.markdown("---")
     st.markdown(
