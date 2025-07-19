@@ -1,0 +1,26 @@
+# Core Data Science Libraries
+numpy
+pandas
+scipy
+
+# Machine Learning
+scikit-learn
+
+# Data Visualization
+matplotlib
+seaborn
+
+# Jupyter Notebook Support
+jupyter
+ipykernel
+
+# Utility Libraries
+tqdm
+
+# Data I/O (optional but commonly needed)
+openpyxl
+xlrd
+
+streamlit
+openai
+plotly
