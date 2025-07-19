@@ -186,13 +186,13 @@ def main():
     # Display results if available
     if 'insights' in st.session_state:
         # AI Insights
+        insights = st.session_state.insights
         st.markdown("---")
         st.markdown("### 🤖 AI Insights & Recommendations")
         
         insight_text = insights.get('ai_insights', 'No AI insights available')
         st.info(insight_text)
 
-        insights = st.session_state.insights
         scores = insights['risk_scores']
         hist = insights['historical_analysis']
         soil = insights['soil_analysis']
