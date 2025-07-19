@@ -241,7 +241,7 @@ class ClimateInsightEngine:
             response = self.client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a climate risk analyst providing brief, provided the given information generate insights for potential real estate buyers in the area. consider things like based on soil type there can be less or more water logging. more water logging means less structure strength over time etc. Analyze everything thoroughly and give concise answers."},
+                    {"role": "system", "content": "You are a climate risk analyst providing brief, provided the given information generate insights for potential real estate buyers in the area. consider things like based on soil type there can be less or more water logging. more water logging means less structure strength over time etc. Explain how the AQI will affect health etc. Analyze everything thoroughly and give concise answers."},
                     {"role": "user", "content": prompt}
                 ],
                 max_tokens=150,
