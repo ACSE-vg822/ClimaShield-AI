@@ -248,7 +248,7 @@ def main():
         
         # Export functionality
         st.markdown("---")
-        col1, col2 = st.columns(2)
+        col1 = st.columns(1)
         
         with col1:
             if st.button("📄 Export Report", use_container_width=True):
