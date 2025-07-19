@@ -3,7 +3,7 @@
 - Public Deploymemt: https://climashield-ai-dutuse2ruumozk5necijyb.streamlit.app/
 - List of realworld datasources: https://www.notion.so/ClimaShield-23482e3d81d88025b796fcf45437301c?source=copy_link
 
-For this project we have used synthetic data. Cleaning and using realworld data seemed out of scope for a 24h. But we did deep research to find out what all data sources we can use when building it later.
+For this project we have used synthetic data. Cleaning and using realworld data seemed out of scope for a 24h hackathon. But we did deep research to find out what all data sources we can use when building it later.
 
 We using classical ML to predict AQI and rainfall for further years for each area of bangalore. Then these predicted numerical data points are wraped in a prompt sent to OpenAI alongwith domain specific knowledge like how soil type affects water logging etc. for in depth analysis.
 **AI-Powered Climate Risk Assessment & Prediction Platform**
